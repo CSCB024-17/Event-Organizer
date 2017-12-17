@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+<link rel="stylesheet" type="text/css" href="style.css">      
+</head>
+
+<body>
+    <div class="header">
+        <h1>Event Organizer</h1>
+    </div>
+
+    <div class="topnav">
+        <a href="home.html">Exit</a>
+        <a href="#">Create Requests</a>
+        <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">My Profile</button>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="client_change_info.html">Change personal info</a>
+                <a href="client_my_requests.html">My Requests</a>
+                <a href="client_send_message.html">Send mail to organizer</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        /* When the user clicks on the button, 
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown menu if the user clicks outside of it
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+            }
+          }
+        }
+    </script>
+
+</body>
+</html>

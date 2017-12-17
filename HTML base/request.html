@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+<link rel="stylesheet" type="text/css" href="style.css">  
+</head>
+
+<body>
+    <div class="header">
+        <h1>Event Organizer</h1>
+    </div>
+
+    <div class="topnav">
+        <a href="home.html">Exit</a>
+        <a href="#">Event Requests</a>
+        <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">My Profile</button>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="#">Change personal info</a>
+                <a href="#">Requests</a>
+                <a href="#">Edit my request</a>
+                <a href="#">Send mail to organizer</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <form action="recieve.html" method="post">
+            <label><b>Organizer</b></label>
+            <select name="organizer"> 
+                <option>gon populate...</option>
+            </select>
+
+            <label><p><b>Event type</b></label>
+            <select name="event type"> 
+                <option>Baptism</option>
+                <option>Birthday party</option>
+                <option>Corporate party</option>
+                <option>Private party</option>
+                <option>Seminar</option>
+                <option>Team building</option>
+                <option>Wedding</option>
+            </select>
+
+            <label><p><b>Food options</b></label>
+            <select name="food options"> 
+                <option>Menu</option>
+                <option>Catering</option>
+            </select>
+
+            <label><p><b>Number of participants</b></label>
+            <input type="number" placeholder="Enter number of participants" name="number of participants" required/>
+
+            <label><b>Additional information</b></label>
+            <br>
+            <textarea name="addInfo" rows="5" cols="50" placeholder="Anything else?"></textarea> 
+            <br>
+        
+            <button type="submit">Submit</button>
+            <button type="button" class="cancelbtn" onclick="cancel()">Cancel</button>
+        </form>
+    </div>
+
+</body>
+</html>
